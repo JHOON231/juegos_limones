@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Caza Estrellas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caza Estrellas | Lemon Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="limones.css"/>
 </head>
 <body onload="iniciar()">
-  <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones has jugo</p>
-    <h2>Jhon Quintero</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
+
+  <div class="main-wrapper">
+    <header>
+      <h1 class="titulo-juego">ATRAPAR <span class="highlight">LIMONES</span></h1>
+      <p class="tagline">"Si del cielo te caen limones, haz jugo"</p>
+    </header>
+
+    <div class="contenedor-juego">
+      <div class="stats-bar">
+        <div class="stat-card">
+          <span class="label">Puntaje</span>
+          <span id="txtPuntaje" class="value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">Vidas</span>
+          <span id="txtVidas" class="value">3</span>
+        </div>
+      </div>
+
+      <canvas id="areaJuego" width="600" height="400"></canvas>
+
+      <div class="controles">
+        <div class="botones-direccion">
+          <button class="btn btn-move" onclick="moverIzquierda();">
+            <i>←</i> Izquierda
+          </button>
+          <button class="btn btn-move" onclick="moverDerecha();">
+            Derecha <i>→</i>
+          </button>
+        </div>
+        <button class="btn btn-reiniciar" onclick="reiniciar();">Reiniciar Juego</button>
+      </div>
     </div>
-    <div class="botones">
-      <button onclick="moverIzquierda();">Izquierda</button>
-      <button onclick="moverDerecha();">Derecha</button>
-      <button onclick="reiniciar();">Reiniciar</button>
-    </div>
+
+    <footer>
+      <p class="author">Developed by <span>Jhon Quintero</span></p>
+    </footer>
   </div>
+
   <script src="limones.js"></script>
   <script src="utils.js"></script>
 </body>
