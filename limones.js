@@ -13,8 +13,11 @@ let limonX = canvas.width/2;
 let limonY = 0;
 let puntaje = 0;
 let vidas = 3;
+let velocidadCaida = 200;
+let intervalo;
 
 function iniciar(){
+    intervalo = setInterval(bajarLimon,velocidadCaida);
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -80,11 +83,19 @@ function detectarPiso(){
         aparecerLimon();
         vidas = vidas - 1; 
         mostrarEnSpan("txtVidas",vidas);
-    }
+        if(vidas <= 0){
+        gameOver();
+        }
+      }
     }
 
 function aparecerLimon(){
     limonX=generarAleatorio(0,canvas.width-ANCHO_LIMON);
     limonY=0;
     actualizarPantalla();
+}
+
+function gameOver(){
+    clearInterval(intervalo);
+    alert("GAME OVER");
 }
