@@ -116,5 +116,5 @@ function aumentarVelocidad(){
 function ganar(){
     clearInterval(intervalo);
     mostrarEnSpan("txtGameOver","🍋¡TIENES LOS LIMONES! has jugo de mora 😎");
-    alert("🍋¡TIENES LOS LIMONES! has jugo de mora 😎");
+    alert("¡TIENES LOS LIMONES! has jugo de mora ");
 }
