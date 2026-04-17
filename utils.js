@@ -10,5 +10,7 @@ function generarAleatorio(min,max){
 
 function mostrarEnSpan(idSpan, valor){
     let componente = document.getElementById(idSpan);
-    componente.textContent = valor;
+    if(componente != null){
+        componente.textContent = valor;
+    }
 }
