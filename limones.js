@@ -83,7 +83,7 @@ function detectarAtrapado(){
 }
 
 function detectarPiso(){
-    if(limonY+ALTURA_LIMON==canvas.height-ALTURA_SUELO-ALTURA_LIMON){
+    if(limonY+ALTURA_LIMON>=canvas.height-ALTURA_SUELO-ALTURA_LIMON){
         aparecerLimon();
         vidas = vidas - 1; 
         mostrarEnSpan("txtVidas", vidas);
@@ -117,4 +117,15 @@ function ganar(){
     clearInterval(intervalo);
     mostrarEnSpan("txtGameOver","🍋¡TIENES LOS LIMONES! has jugo de mora 😎");
     alert("¡TIENES LOS LIMONES! has jugo de mora ");
+}
+
+function reiniciar(){
+    clearInterval(intervalo);
+    vidas = 3;
+    puntaje = 0;
+    velocidadCaida = 200;
+    mostrarEnSpan("txtVidas",vidas);
+    mostrarEnSpan("txtPuntaje",puntaje);
+    mostrarEnSpan("txtGameOver","");
+    iniciar();
 }
