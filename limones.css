@@ -17,14 +17,14 @@ body {
   color: white;
 
   /* 🍋 FONDO CON TU IMAGEN */
-  background-image: url("limon.png");
+  background-image: url("limon.PNG");
   background-repeat: repeat;   /* 🔥 patrón de limones */
   background-size: 200px;      /* ajusta tamaño */
 }
 
 h1, p, span, button {
   color: #3ac741;
-  text-shadow: 3px 3px 0px black;
+  text-shadow: 2px 2px 0px black;
 }
 
 .main-wrapper {
