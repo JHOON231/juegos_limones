@@ -37,14 +37,36 @@ h1, p, span, button {
 
 .titulo-juego {
   font-family: 'Bungee', cursive;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 0;
-  color: #ffcb05; /* amarillo Pokémon */
-  text-shadow: 3px 3px 0px #000, 5px 5px 0px var(--primary);
+  color: #ffcb05;
+
+  text-shadow:
+    3px 3px 0 #000,
+    6px 6px 0 #1e293b,
+    0 0 15px rgba(255, 203, 5, 0.7);
+
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
 }
 
 .highlight {
-  color: var(--accent);
+  color: #a3e635;
+
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #3ac741,
+    0 0 20px rgba(163, 230, 53, 0.8);
+
+  animation: brillo 1.5s infinite alternate;
 }
 
 .tagline {
@@ -151,4 +173,24 @@ canvas {
 .author span {
   color: var(--primary);
   font-weight: bold;
+}
+
+.ganador {
+  animation: ganadorGlow 0.8s infinite alternate;
+}
+
+@keyframes ganadorGlow {
+  from {
+    text-shadow:
+      2px 2px 0 #000,
+      4px 4px 0 #3ac741,
+      0 0 10px rgba(255, 255, 0, 0.5);
+  }
+  to {
+    text-shadow:
+      2px 2px 0 #000,
+      4px 4px 0 #3ac741,
+      0 0 30px rgba(255, 255, 0, 1),
+      0 0 60px rgba(255, 255, 0, 0.8);
+  }
 }

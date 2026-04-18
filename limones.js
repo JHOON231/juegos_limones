@@ -115,8 +115,16 @@ function aumentarVelocidad(){
 
 function ganar(){
     clearInterval(intervalo);
+
     mostrarEnSpan("txtGameOver","🍋¡TIENES LOS LIMONES! has jugo de mora 😎");
+
+    // ✨ EFECTO DE VICTORIA
+    const titulo = document.querySelector(".titulo-juego");
+    titulo.classList.add("ganador");
+    titulo.textContent = "🏆 ¡GANASTE!";
+
     alert("¡TIENES LOS LIMONES! has jugo de mora ");
+    
 }
 
 function reiniciar(){
