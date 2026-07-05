@@ -29,7 +29,7 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="red";
+    ctx.fillStyle="pink";
     ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
@@ -55,7 +55,7 @@ function limpiarCanvas(){
 } 
 
 function dibujarLimones(){
-    ctx.fillStyle="red";
+    ctx.fillStyle="yellow";
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
 }
 
